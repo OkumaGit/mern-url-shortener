@@ -1,6 +1,7 @@
 console.log("App!");
 const express = require("express");
-const config = require("config");
+require("dotenv").config();
+// const config = require("config");
 const mongoose = require("mongoose");
 const cors = require("cors"); // CORS middleware for handling cross-origin requests
 const path = require("path");
@@ -26,10 +27,25 @@ const PORT = process.env.PORT || 4000;
 // const PORT = config.get("port") || 4000;
 // const PORT = require("dotenv").config();
 
+// async function start() {
+//   try {
+//     console.log("Attempting to connect to MongoDB...");
+//     await mongoose.connect(config.get("mongoUri"));
+//     console.log("MongoDB connected successfully!");
+
+//     app.listen(PORT, () =>
+//       console.log(`App has been started on port ${PORT}... `)
+//     );
+//   } catch (e) {
+//     console.log("Server error", e.message);
+//     process.exit(1);
+//   }
+// }
+
 async function start() {
   try {
     console.log("Attempting to connect to MongoDB...");
-    await mongoose.connect(config.get("mongoUri"));
+    await mongoose.connect(process.env.MONGO_URI);
     console.log("MongoDB connected successfully!");
 
     app.listen(PORT, () =>
