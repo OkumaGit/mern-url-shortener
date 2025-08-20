@@ -1,0 +1,6 @@
+{
+  "port": 4000,
+  "jwtSecret": "url_Shortener",
+  "mongoUri": "mongodb+srv://veryeasy20:Patapon30@cluster0.wptxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  "baseUrl": "http://localhost:4000"
+}

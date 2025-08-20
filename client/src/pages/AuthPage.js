@@ -5,16 +5,16 @@ import { useMessage } from "../hooks/message.hook";
 import { AuthContext } from "../context/AuthContext";
 import { NewPage } from "./NewPage";
 
-const data = async () => {
-  try {
-    const response = await axios.get(
-      "mongodb+srv://veryeasy20:Patapon30@cluster0.wptxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-    );
-    console.log(response.data);
-  } catch (error) {
-    console.log(error);
-  }
-};
+// const data = async () => {
+//   try {
+//     const response = await axios.get(
+//       ""
+//     );
+//     console.log(response.data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 export const AuthPage = () => {
   const auth = useContext(AuthContext);
