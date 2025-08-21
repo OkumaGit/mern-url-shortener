@@ -122,7 +122,7 @@ export const AuthPage = () => {
           </div>
         </div>
         <div className="col s6 offset-s3">
-          <span style={{ fontSize: "10px", color: "gray" }}>
+          <span style={{ fontSize: "px", color: "gray" }}>
             Built with React, Express.js, MongoDB | Styled with Materialize CSS
           </span>
         </div>
