@@ -24,23 +24,6 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const PORT = process.env.PORT || 4000;
-// const PORT = config.get("port") || 4000;
-// const PORT = require("dotenv").config();
-
-// async function start() {
-//   try {
-//     console.log("Attempting to connect to MongoDB...");
-//     await mongoose.connect(config.get("mongoUri"));
-//     console.log("MongoDB connected successfully!");
-
-//     app.listen(PORT, () =>
-//       console.log(`App has been started on port ${PORT}... `)
-//     );
-//   } catch (e) {
-//     console.log("Server error", e.message);
-//     process.exit(1);
-//   }
-// }
 
 async function start() {
   try {
@@ -56,20 +39,5 @@ async function start() {
     process.exit(1);
   }
 }
-
-// //test
-// const ItemSchema = new mongoose.Schema({ name: String });
-// const Item = mongoose.model("Item", ItemSchema);
-
-// app.get("/items", async (req, res) => {
-//   try {
-//     const items = await Item.find(); // Найти все
-//     res.json(items);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).send("Error fetching items");
-//   }
-// });
-// //
 
 start();
